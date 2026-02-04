@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine 💖</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #yesBtn {
+            background-color: #ff2d55;
+            color: white;
+        }
+
+        #noBtn {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <h1>Will you be my Valentine? 💕</h1>
+    <button id="yesBtn">Yes ❤️</button>
+    <button id="noBtn">No 💔</button>
+</div>
+
+<script>
+    let yesSize = 20;
+
+    document.getElementById("noBtn").addEventListener("click", function () {
+        yesSize += 12;
+        let yesBtn = document.getElementById("yesBtn");
+        yesBtn.style.fontSize = yesSize + "px";
+        yesBtn.style.padding = (yesSize / 2) + "px";
+    });
+
+    document.getElementById("yesBtn").addEventListener("click", function () {
+        document.body.innerHTML = `
+            <h1 style="color:white;">
+                Yayyy! 💖🥰<br>
+                I knew you’d say YES!<br>
+                Happy Valentine’s 💕
+            </h1>
+        `;
+    });
+</script>
+
+</body>
+</html>
